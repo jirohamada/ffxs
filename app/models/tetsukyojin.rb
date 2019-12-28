@@ -1,0 +1,2 @@
+class Tetsukyojin < ApplicationRecord
+end

@@ -1,0 +1,82 @@
+.header{
+  height: 90px;
+  width: 100vw;
+  background-color:aqua ;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  background-image: url("ffx-header.jpg");
+  background-size: cover;
+}
+.contents{
+  height: calc(100vh - 90px);
+  width: 100vw;
+  display: flex;
+  
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  .area{
+    color: black;
+    z-index: 1;
+    width: 40%;
+    height: 40%;
+    // background-image: url("ffx-area.jpg");
+    // background-size: cover;
+    margin: 150px 5% 100px 5%;
+    font-weight: bold;
+    color: blanchedalmond;
+    font-size: 30px;
+    .AREAlink{
+      text-decoration: none;
+    }
+  }
+  .species{
+    color: black;
+    z-index: 1;
+    width: 40%;
+    height: 40%;
+    // background-image: url("ffx-species.jpg");
+    // background-size: cover;
+    margin: 270px 5% 0px 5%;
+    font-weight: bold;
+    color: red;
+    font-size: 30px;
+    .SPECIESlink{
+      text-decoration: none;
+    }
+  }
+  // ここから背景画像の設定
+  .background-contents{
+    height: 100%;
+    width: 100%;
+    background-image: url("ffx-index.jpg");
+    position: absolute;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+  }
+}
+.btn-square-so-pop {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #fd9535;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  border: solid 2px #d27d00;/*線色*/
+}
+
+.btn-square-so-pop:active {
+  /*押したとき*/
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+.return-top{
+  text-decoration: none;
+}
+.h1{
+  z-index: 3;
+}
