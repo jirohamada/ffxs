@@ -9,28 +9,33 @@
       <i class="material-icons">remove_circle_outline</i>
       鉄巨人
       捕獲数:<%= Tetsukyojin.count%>
-      <%# <i class="material-icons">control_point</i> %>
 
-      <%= form_tag('/giants', method: :post) do %>
-        <label>
-          <h1>
-            <i class="material-icons">control_point</i>
-          </h1>           
-          <input type="submit" value="SENT" class="submit-btn">
-        </label>
-      <% end %>
+      <%= form_with(url: giants_path, model: @tetsukyojin, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , name: "tetsukyojin"%> 
+      <% end %>  
+
+      
       
     </div>
     <div class="target">
       <i class="material-icons">remove_circle_outline</i>
       ウルフラマイター（青）
       捕獲数:<%= BlueUruhuramaiter.count%>
-      <i class="material-icons" type="button">control_point</i>
+
+      
+      <%= form_with(url: giants_path, model: @blueuruhuramaiter, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , name: "blueuruhuramaiter"%> 
+      <% end %>
     </div>
     <div class="target">
       <i class="material-icons">remove_circle_outline</i>
       ウルフラマイター（赤）
-      <i class="material-icons">control_point</i>
+      捕獲数:<%= RedUruhuramaiter.count%>
+
+      <%= form_with(url: giants_path, model: @reduruhuramaiter, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , name: "red_uruhuramaiter"%> 
+      <% end %>
+
     </div>
   </div>
 </div>

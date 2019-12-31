@@ -1,0 +1,2 @@
+class RedUruhuramaiter < ApplicationRecord
+end
