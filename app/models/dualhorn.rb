@@ -1,0 +1,2 @@
+class Dualhorn < ApplicationRecord
+end

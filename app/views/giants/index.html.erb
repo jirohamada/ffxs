@@ -1,39 +1,31 @@
 <div class="header">
-  <a href="/" class="return-top">ゲスト</a>
+  <a href="/" class="return-top">
+    <%="#{current_user.nickname}さんの捕獲状況"%>
+  </a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
+<%# ↓鉄巨人のカウントフォーム %>
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      鉄巨人
-      捕獲数:<%= Tetsukyojin.count%>
-
-      <%= form_with(url: giants_path, model: @tetsukyojin, method: :get, local: true) do |f| %>
-        <%= f.submit "＋" , name: "tetsukyojin"%> 
-      <% end %>  
-
-      
-      
+      <div class="count">鉄巨人の捕獲数:<%= @tetsukyojins %></div>
+      <%= form_with(url: giants_path, model: Tetsukyojin, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "tetsukyojin"%> 
+      <% end %>       
     </div>
-    <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ウルフラマイター（青）
-      捕獲数:<%= BlueUruhuramaiter.count%>
-
-      
-      <%= form_with(url: giants_path, model: @blueuruhuramaiter, method: :get, local: true) do |f| %>
-        <%= f.submit "＋" , name: "blueuruhuramaiter"%> 
+<%# ↓青ウルフラマイターのカウントフォーム %>
+    <div class="target">   
+      <div class="count">ウルフラマイター（青）の捕獲数:<%= @blueuruhuramaiters%></div>     
+      <%= form_with(url: giants_path, model: BlueUruhuramaiter, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class:"btn-gradient-3d" , name: "blueuruhuramaiter"%> 
       <% end %>
     </div>
+<%# ↓赤ウルフラマイターのカウントフォーム %>
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ウルフラマイター（赤）
-      捕獲数:<%= RedUruhuramaiter.count%>
-
-      <%= form_with(url: giants_path, model: @reduruhuramaiter, method: :get, local: true) do |f| %>
-        <%= f.submit "＋" , name: "red_uruhuramaiter"%> 
+      <div class="count">ウルフラマイター（赤）の捕獲数:<%= @red_uruhuramaiters%></div>
+      <%= form_with(url: giants_path, model: RedUruhuramaiter, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d",name: "red_uruhuramaiter"%> 
       <% end %>
 
     </div>

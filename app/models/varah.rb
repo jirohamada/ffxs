@@ -1,0 +1,2 @@
+class Varah < ApplicationRecord
+end

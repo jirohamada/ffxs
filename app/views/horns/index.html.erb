@@ -1,24 +1,30 @@
 <div class="header">
-  <a href="/" class="return-top">ゲスト</a>
+  <a href="/" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      デュアルホーン
-      <i class="material-icons">control_point</i>
+      <div class="count">デュアルホーンの捕獲数:<%= Dualhorn.count%></div>
+      <%= form_with(url: horns_path, model: @dualhorn, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "dualhorn"%> 
+      <% end %>
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      グレンデル
-      <i class="material-icons">control_point</i>
+      <div class="count">グレンデルの捕獲数:<%= Gurendel.count%></div>
+      <%= form_with(url: horns_path, model: @gurendel, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "gurendel"%> 
+      <% end %>
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ヴァラーハ
-      <i class="material-icons">control_point</i>
+      <div class="count">ヴァラーハの捕獲数:<%= Varah.count%></div>
+      <%= form_with(url: horns_path, model: @varah, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "varah"%> 
+      <% end %>
     </div>
   </div>
 </div>

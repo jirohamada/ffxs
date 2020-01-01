@@ -1,0 +1,2 @@
+class Gurendel < ApplicationRecord
+end

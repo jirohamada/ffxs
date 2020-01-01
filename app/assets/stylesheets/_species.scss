@@ -1,19 +1,33 @@
 .race{
   z-index: 2;
+  a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100vw;
+    // margin-bottom:5px ;
+    // margin-top: 5px;
+    margin: 10px auto;
+  }
 }
 .targets{
   margin: auto;
+  font-weight: bold;
   
 }
 .target{
   padding: 20px 30px 20px 30px;
   margin: 0px 20px 0px 20px;
   z-index: 2;
-  
+  display: flex;
 }
 form{
   z-index: 3;
 }
 .submit-btn{
   display: none;
+}
+.count{
+  margin-right: 20px;
 }
