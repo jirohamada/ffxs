@@ -1,24 +1,30 @@
 <div class="header">
-  <a href="/" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+  <a href="/species" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      フンゴオンゴ
-      <i class="material-icons">control_point</i>
+      <div class="count">フンゴオンゴの捕獲数:<%= Fungongo.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: mushrooms_path, model: Fungongo, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "fungongo"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ソーン
-      <i class="material-icons">control_point</i>
+      <div class="count">ソーンの捕獲数:<%= Sorn.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: mushrooms_path, model: Sorn, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "sorn"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      アンテサンサン
-      <i class="material-icons">control_point</i>
+      <div class="count">アンテサンサンの捕獲数:<%= Antesantan.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: mushrooms_path, model: Antesantan, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "antesantan"%> 
+      <% end %>       
     </div>
   </div>
 </div>

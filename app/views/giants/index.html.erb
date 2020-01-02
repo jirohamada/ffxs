@@ -1,5 +1,5 @@
 <div class="header">
-  <a href="/" class="return-top">
+  <a href="/species" class="return-top">
     <%="#{current_user.nickname}さんの捕獲状況"%>
   </a>
 </div>
@@ -9,21 +9,21 @@
   <div class="targets">
 <%# ↓鉄巨人のカウントフォーム %>
     <div class="target">
-      <div class="count">鉄巨人の捕獲数:<%= @tetsukyojins %></div>
+      <div class="count">鉄巨人の捕獲数:<%= Tetsukyojin.includes(:user).where(user_id: current_user.id).count %></div>
       <%= form_with(url: giants_path, model: Tetsukyojin, method: :get, local: true) do |f| %>
         <%= f.submit "＋" , class: "btn-gradient-3d", name: "tetsukyojin"%> 
       <% end %>       
     </div>
 <%# ↓青ウルフラマイターのカウントフォーム %>
     <div class="target">   
-      <div class="count">ウルフラマイター（青）の捕獲数:<%= @blueuruhuramaiters%></div>     
+      <div class="count">ウルフラマイター（青）の捕獲数:<%= BlueUruhuramaiter.includes(:user).where(user_id: current_user.id).count %></div>     
       <%= form_with(url: giants_path, model: BlueUruhuramaiter, method: :get, local: true) do |f| %>
         <%= f.submit "＋" , class:"btn-gradient-3d" , name: "blueuruhuramaiter"%> 
       <% end %>
     </div>
 <%# ↓赤ウルフラマイターのカウントフォーム %>
     <div class="target">
-      <div class="count">ウルフラマイター（赤）の捕獲数:<%= @red_uruhuramaiters%></div>
+      <div class="count">ウルフラマイター（赤）の捕獲数:<%= RedUruhuramaiter.includes(:user).where(user_id: current_user.id).count %></div>
       <%= form_with(url: giants_path, model: RedUruhuramaiter, method: :get, local: true) do |f| %>
         <%= f.submit "＋" , class: "btn-gradient-3d",name: "red_uruhuramaiter"%> 
       <% end %>

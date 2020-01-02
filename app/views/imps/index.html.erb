@@ -1,24 +1,29 @@
 <div class="header">
-  <a href="/" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+  <a href="/species" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ガンダルヴァ
-      <i class="material-icons">control_point</i>
+      <div class="count">ガンダルヴァの捕獲数:<%= Gandharva.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: imps_path, model: Gandharva, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "gandharva"%> 
+      <% end %>
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      エイロージュ
-      <i class="material-icons">control_point</i>
+      <div class="count">エイロージュの捕獲数:<%= Airloge.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: imps_path, model: Airloge, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "airloge"%> 
+      <% end %>
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ガルキマセラ
-      <i class="material-icons">control_point</i>
+      <div class="count">ガルキマセラの捕獲数:<%= Gulquimasera.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: imps_path, model: Gulquimasera, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "gulquimasera"%> 
+      <% end %>
     </div>
   </div>
 </div>

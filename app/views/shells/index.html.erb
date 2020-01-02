@@ -1,39 +1,51 @@
 <div class="header">
-  <a href="/" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+  <a href="/species" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ラルド
-      <i class="material-icons">control_point</i>
+      <div class="count">ラルドの捕獲数:<%= Lald.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: shells_path, model: Lald, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "lald"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      バニップ
-      <i class="material-icons">control_point</i>
+      <div class="count">バニップの捕獲数:<%= Vanip.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: shells_path, model: Vanip, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "vanip"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ムルフシュ
-      <i class="material-icons">control_point</i>
+      <div class="count">ムルフシュの捕獲数:<%= Murhush.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: shells_path, model: Murhush, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "murhush"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      マフート
-      <i class="material-icons">control_point</i>
+      <div class="count">マフートの捕獲数:<%= Mahout.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: shells_path, model: Mahout, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "mahout"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      シュレッド
-      <i class="material-icons">control_point</i>
+      <div class="count">シュレッドの捕獲数:<%= Shred.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: shells_path, model: Shred, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "shred"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ハァルマ
-      <i class="material-icons">control_point</i>
+      <div class="count">ハァルマの捕獲数:<%= Harma.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: shells_path, model: Harma, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "harma"%> 
+      <% end %>       
     </div>
   </div>
 </div>

@@ -1,34 +1,43 @@
 <div class="header">
-  <a href="/" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+  <a href="/species" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      フロートアイ
-      <i class="material-icons">control_point</i>
+      <div class="count">フロートアイの捕獲数:<%= Floateye.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: eyeballs_path, model: Floateye, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "floateye"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ブエル
-      <i class="material-icons">control_point</i>
+      <div class="count">ブエルの捕獲数:<%= Buell.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: eyeballs_path, model: Buell, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "buell"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      イービルアイ
-      <i class="material-icons">control_point</i>
+      <div class="count">イービルアイの捕獲数:<%= Evileye.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: eyeballs_path, model: Evileye, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "evileye"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      アーリマン
-      <i class="material-icons">control_point</i>
+      <div class="count">アーリマンの捕獲数:<%= Ahriman.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: eyeballs_path, model: Ahriman, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ahriman"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      デスフロート
-      <i class="material-icons">control_point</i>
+      <div class="count">デスフロートの捕獲数:<%= Deathfloat.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: eyeballs_path, model: Deathfloat, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "deathfloat"%> 
+      <% end %>       
     </div>
   </div>
 </div>

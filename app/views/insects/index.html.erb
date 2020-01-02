@@ -1,29 +1,36 @@
 <div class="header">
-  <a href="/" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+  <a href="/species" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      キラービー
-      <i class="material-icons">control_point</i>
+      <div class="count">キラービーの捕獲数:<%= Killerbee.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: insects_path, model: Killerbee, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "killerbee"%> 
+      <% end %>
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      バイトバグ
-      <i class="material-icons">control_point</i>
+      <div class="count">バイトバグの捕獲数:<%= Bytebug.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: insects_path, model: Bytebug, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "bytebug"%> 
+      <% end %>
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ワスプ
-      <i class="material-icons">control_point</i>
+      <div class="count">ワスプの捕獲数:<%= Wasp.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: insects_path, model: Wasp, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "wasp"%> 
+      <% end %>
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ネビロス
-      <i class="material-icons">control_point</i>
+      <div class="count">ネビロスの捕獲数:<%= Neviro.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: insects_path, model: Neviro, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "neviro"%> 
+      <% end %>
     </div>
   </div>
 </div>

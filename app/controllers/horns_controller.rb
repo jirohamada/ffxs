@@ -1,13 +1,13 @@
 class HornsController < ApplicationController
   def index
-    @dualhorn = Dualhorn.new
-    @gurendel = Gurendel.new
-    @varah = Varah.new
+    @dualhorn = Dualhorn.new(user_id: current_user.id)
+    @gurendel = Gurendel.new(user_id: current_user.id)
+    @varah = Varah.new(user_id: current_user.id)
     if params[:dualhorn] 
       @dualhorn.save
     elsif params[:gurendel] 
       @gurendel.save   
-    else params[:varah]
+    elsif params[:varah]
       @varah.save     
     end
   end

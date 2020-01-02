@@ -1,34 +1,44 @@
 <div class="header">
-  <a href="/" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+  <a href="/species" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
+    
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ヴィーヴル
-      <i class="material-icons">control_point</i>
+      <div class="count">ヴィーヴルの捕獲数:<%= Vivre.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: dragons_path, model: Vivre, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "vivre"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ラマシュトゥ
-      <i class="material-icons">control_point</i>
+      <div class="count">ラマシュトゥの捕獲数:<%= Ramashtu.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: dragons_path, model: Ramashtu, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ramashtu"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      クサーリク
-      <i class="material-icons">control_point</i>
+      <div class="count">クサーリクの捕獲数:<%= Ksarlik.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: dragons_path, model: Ksarlik, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ksarlik"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ムシュフシュ
-      <i class="material-icons">control_point</i>
+      <div class="count">ムシュフシュの捕獲数:<%= Mushufsh.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: dragons_path, model: Mushufsh, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "mushufsh"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ニーズヘッグ
-      <i class="material-icons">control_point</i>
+      <div class="count">ニーズヘッグの捕獲数:<%= Needshegg.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: dragons_path, model: Needshegg, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "needshegg"%> 
+      <% end %>       
     </div>
   </div>
 </div>

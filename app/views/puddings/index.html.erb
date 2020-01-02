@@ -1,39 +1,50 @@
 <div class="header">
-  <a href="/" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+  <a href="/species" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
-    <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ウォータプリン
-      <i class="material-icons">control_point</i>
+   <div class="target">
+      <div class="count">ウォータプリンの捕獲数:<%= Water.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: puddings_path, model: Water, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "water"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      サンダープリン
-      <i class="material-icons">control_point</i>
+      <div class="count">サンダープリンの捕獲数:<%= Thunder.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: puddings_path, model: Thunder, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "thunder"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      スノープリン
-      <i class="material-icons">control_point</i>
+      <div class="count">スノープリンの捕獲数:<%= Snow.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: puddings_path, model: Snow, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "snow"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      フレイムプリン
-      <i class="material-icons">control_point</i>
+      <div class="count">フレイムプリンの捕獲数:<%= Flame.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: puddings_path, model: Flame, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "flame"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      アイスプリン
-      <i class="material-icons">control_point</i>
+      <div class="count">アイスプリンの捕獲数:<%= Ice.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: puddings_path, model: Ice, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ice"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ダークプリン
-      <i class="material-icons">control_point</i>
+      <div class="count">ダークプリンの捕獲数:<%= Darkp.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: puddings_path, model: Darkp, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "darkp"%> 
+      <% end %>       
     </div>
   </div>
 </div>

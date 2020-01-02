@@ -1,44 +1,57 @@
 <div class="header">
-  <a href="/" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+  <a href="/species" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
 </div>
 <div class="contents">
   <div class="background-contents">
   </div>
   <div class="targets">
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      イエローエレメント
-      <i class="material-icons">control_point</i>
+      <div class="count">イエローエレメントの捕獲数:<%= Yellow.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: elementals_path, model: Yellow, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "yellow"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ホワイトエレメント
-      <i class="material-icons">control_point</i>
+      <div class="count">ホワイトエレメントの捕獲数:<%= White.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: elementals_path, model: White, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "white"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      レッドエレメント
-      <i class="material-icons">control_point</i>
+      <div class="count">レッドエレメントの捕獲数:<%= Red.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: elementals_path, model: Red, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "red"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ゴールドエレメント
-      <i class="material-icons">control_point</i>
+      <div class="count">ゴールドエレメントの捕獲数:<%= Gold.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: elementals_path, model: Gold, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "gold"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ブルーエレメント
-      <i class="material-icons">control_point</i>
+      <div class="count">ブルーエレメントの捕獲数:<%= Blue.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: elementals_path, model: Blue, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "blue"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ダークエレメント
-      <i class="material-icons">control_point</i>
+      <div class="count">ダークエレメントの捕獲数:<%= Dark.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: elementals_path, model: Dark, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "dark"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ブラックエレメント
-      <i class="material-icons">control_point</i>
+      <div class="count">ブラックエレメントの捕獲数:<%= Black.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: elementals_path, model: Black, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "black"%> 
+      <% end %>       
     </div>
   </div>
 </div>
