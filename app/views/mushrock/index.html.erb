@@ -1,0 +1,51 @@
+<div class="header">
+  <a href="/areas" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+</div>
+<div class="contents">
+  <div class="background-contents"></div>
+  <div class="targets">
+
+    <div class="target">
+      <div class="count">ラプトゥルの捕獲数:<%= Raptur.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: mushrock_index_path, model: Raptur, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "raptur"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">ガンダルヴァの捕獲数:<%= Gandharva.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: mushrock_index_path, model: Gandharva, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "gandharva"%> 
+      <% end %>
+    </div>
+
+    <div class="target">
+      <div class="count">サンダープリンの捕獲数:<%= Thunder.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: mushrock_index_path, model: Thunder, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "thunder"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">レッドエレメントの捕獲数:<%= Red.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: mushrock_index_path, model: Red, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "red"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">ラマシュトゥの捕獲数:<%= Ramashtu.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: mushrock_index_path, model: Ramashtu, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ramashtu"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">ガルダの捕獲数:<%= Galda.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: mushrock_index_path, model: Galda, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "galda"%> 
+      <% end %>       
+    </div>
+
+  </div>
+</div>

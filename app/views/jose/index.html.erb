@@ -1,0 +1,56 @@
+<div class="header">
+  <a href="/areas" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+</div>
+<div class="contents">
+  <div class="background-contents"></div>
+  <div class="targets">
+    <div class="target">
+      <div class="count">ガルムの捕獲数:<%= Garm.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: jose_index_path, model: Garm, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "garm"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">シームルグの捕獲数:<%= Seamulg.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: jose_index_path, model: Seamulg, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "seamulg"%> 
+      <% end %>
+    </div>
+
+    <div class="target">
+      <div class="count">バイトバグの捕獲数:<%= Bytebug.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: jose_index_path, model: Bytebug, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "bytebug"%> 
+      <% end %>
+    </div>
+
+    <div class="target">
+      <div class="count">スノープリンの捕獲数:<%= Snow.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: jose_index_path, model: Snow, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "snow"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">バニップの捕獲数:<%= Vanip.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: jose_index_path, model: Vanip, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "vanip"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">バジリスクの捕獲数:<%= Basilisk.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: jose_index_path, model: Basilisk, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "basilisk"%> 
+      <% end %>
+    </div>
+
+    <div class="target">
+      <div class="count">オチューの捕獲数:<%= Ochu.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: jose_index_path, model: Ochu, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ochu"%> 
+      <% end %>
+    </div>
+  </div>
+</div>

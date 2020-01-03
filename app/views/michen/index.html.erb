@@ -1,0 +1,65 @@
+<div class="header">
+  <a href="/areas" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+</div>
+<div class="contents">
+  <div class="background-contents"></div>
+  <div class="targets">
+
+    <div class="target">
+      <div class="count">ミヘンファングの捕獲数:<%= Michenfang.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: michen_index_path, model: Michenfang, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "michenfang"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">イピリアの捕獲数:<%= Ipil.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: michen_index_path, model: Ipil, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ipil"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">フロートアイの捕獲数:<%= Floateye.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: michen_index_path, model: Floateye, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "floateye"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">ホワイトエレメントの捕獲数:<%= White.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: michen_index_path, model: White, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "white"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">ラルドの捕獲数:<%= Lald.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: michen_index_path, model: Lald, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "lald"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">ヴィーヴルの捕獲数:<%= Vivre.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: michen_index_path, model: Vivre, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "vivre"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">ボムの捕獲数:<%= Bomb.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: michen_index_path, model: Bomb, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "bomb"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">デュアルホーンの捕獲数:<%= Dualhorn.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: michen_index_path, model: Dualhorn, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "dualhorn"%> 
+      <% end %>
+    </div>
+
+  </div>
+</div>

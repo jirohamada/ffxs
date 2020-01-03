@@ -1,0 +1,2 @@
+class Ipirium < ApplicationRecord
+end

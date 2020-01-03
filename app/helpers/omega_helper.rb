@@ -1,0 +1,2 @@
+module OmegaHelper
+end

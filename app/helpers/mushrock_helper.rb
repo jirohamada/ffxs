@@ -1,0 +1,2 @@
+module MushrockHelper
+end

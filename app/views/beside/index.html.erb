@@ -1,0 +1,29 @@
+<div class="header">
+  <a href="/areas" class="return-top"><%="#{current_user.nickname}さんの捕獲状況"%></a>
+</div>
+<div class="contents">
+  <div class="background-contents"></div>
+  <div class="targets">
+
+    <div class="target">
+      <div class="count">ディンゴの捕獲数:<%= Dingo.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: beside_index_path, model: Dingo, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "dingo"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">コンドルの捕獲数:<%= Condor.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: beside_index_path, model: Condor, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "condor"%> 
+      <% end %>
+    </div>
+
+    <div class="target">
+      <div class="count">ウォータプリンの捕獲数:<%= Water.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: beside_index_path, model: Water, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "water"%> 
+      <% end %>       
+    </div>
+  </div>
+</div>

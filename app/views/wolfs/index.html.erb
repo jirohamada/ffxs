@@ -5,40 +5,54 @@
   <div class="background-contents">
   </div>
   <div class="targets">
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ディンゴ
-      <i class="material-icons">control_point</i>
+      <div class="count">ディンゴの捕獲数:<%= Dingo.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: wolfs_path, model: Dingo, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "dingo"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ミヘンファング
-      <i class="material-icons">control_point</i>
+      <div class="count">ミヘンファングの捕獲数:<%= Michenfang.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: wolfs_path, model: Michenfang, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "michenfang"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ガルム
-      <i class="material-icons">control_point</i>
+      <div class="count">ガルムの捕獲数:<%= Garm.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: wolfs_path, model: Garm, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "garm"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      スノーウルフ
-      <i class="material-icons">control_point</i>
+      <div class="count">スノーウルフの捕獲数:<%= Snowwolf.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: wolfs_path, model: Snowwolf, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "snowwolf"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      サンドウルフ
-      <i class="material-icons">control_point</i>
+      <div class="count">サンドウルフの捕獲数:<%= Sandwolf.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: wolfs_path, model: Sandwolf, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "sandwolf"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      スコル
-      <i class="material-icons">control_point</i>
+      <div class="count">スコルの捕獲数:<%= Skol.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: wolfs_path, model: Skol, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "skol"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      バンダースナッチ
-      <i class="material-icons">control_point</i>
+      <div class="count">バンダースナッチの捕獲数:<%= Bandersnatch.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: wolfs_path, model: Bandersnatch, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "bandersnatch"%> 
+      <% end %>       
     </div>
   </div>
 </div>

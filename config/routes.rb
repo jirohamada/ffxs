@@ -2,7 +2,21 @@ Rails.application.routes.draw do
   devise_for :users
   root 'enemys#index'
   resources :areas, only:[:index] 
-  
+  resources :beside,only:[:index]
+  resources :kirika,only:[:index]
+  resources :michen,only:[:index]
+  resources :mushrock,only:[:index]
+  resources :jose,only:[:index]
+  resources :kaminari,only:[:index]
+  resources :macarania,only:[:index]
+  resources :beekanel,only:[:index]
+  resources :nagi,only:[:index]
+  resources :valley,only:[:index]
+  resources :gagazet,only:[:index]
+  resources :shin,only:[:index]
+  resources :omega,only:[:index]
+
+
   resources :species, only:[:index]
   resources :wolfs, only:[:index]
   resources :lizards, only:[:index]

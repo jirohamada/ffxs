@@ -54,4 +54,23 @@ class User < ApplicationRecord
   has_many :condors
   has_many :seamulgs
   has_many :arcuones
+  has_many :dinonics
+  has_many :ipils
+  has_many :rapturs
+  has_many :merusines
+  has_many :schmerkes
+  has_many :yowees
+  has_many :zauras
+  has_many :dingos
+  has_many :michenfangs
+  has_many :garms
+  has_many :snowwolves
+  has_many :sandwolves
+  has_many :skols
+  has_many :bandersnatches
+  has_many :balsams
+  has_many :galdas
+  has_many :basilisks
+  has_many :ochus
+  has_many :unsabotenders
 end

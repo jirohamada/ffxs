@@ -5,40 +5,54 @@
   <div class="background-contents">
   </div>
   <div class="targets">
+    
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ディノニクス
-      <i class="material-icons">control_point</i>
+      <div class="count">ディノニクスの捕獲数:<%= Dinonic.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: lizards_path, model: Dinonic, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "dinonic"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      イピリア
-      <i class="material-icons">control_point</i>
+      <div class="count">イピリアの捕獲数:<%= Ipil.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: lizards_path, model: Ipil, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ipil"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ラプトゥル
-      <i class="material-icons">control_point</i>
+      <div class="count">ラプトゥルの捕獲数:<%= Raptur.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: lizards_path, model: Raptur, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "raptur"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      メリュジヌ
-      <i class="material-icons">control_point</i>
+      <div class="count">メリュジヌの捕獲数:<%= Merusine.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: lizards_path, model: Merusine, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "merusine"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      シュメルケ
-      <i class="material-icons">control_point</i>
+      <div class="count">シュメルケの捕獲数:<%= Schmerke.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: lizards_path, model: Schmerke, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "schmerke"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ヨーウィー
-      <i class="material-icons">control_point</i>
+      <div class="count">ヨーウィーの捕獲数:<%= Yowee.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: lizards_path, model: Yowee, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "yowee"%> 
+      <% end %>       
     </div>
+
     <div class="target">
-      <i class="material-icons">remove_circle_outline</i>
-      ザウラス
-      <i class="material-icons">control_point</i>
+      <div class="count">ザウラスの捕獲数:<%= Zaura.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: lizards_path, model: Zaura, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "zaura"%> 
+      <% end %>       
     </div>
   </div>
 </div>

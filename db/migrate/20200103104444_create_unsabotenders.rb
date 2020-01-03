@@ -1,0 +1,8 @@
+class CreateUnsabotenders < ActiveRecord::Migration[5.2]
+  def change
+    create_table :unsabotenders do |t|
+
+      t.timestamps
+    end
+  end
+end
