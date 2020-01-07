@@ -4,6 +4,55 @@
 <div class="contents">
   <div class="background-contents"></div>
   <div class="targets">
+    
+    <div class="target">
+      <div class="count">メリュジヌの捕獲数:<%= Merusine.includes(:user).where(user_id: current_user.id).count %></div> 
+        <%= form_with(url: kaminari_index_path, model: Merusine, method: :get, local: true) do |f| %>
+          <%= f.submit "＋" , class: "btn-gradient-3d", name: "merusine"%> 
+      <% end %>       
+    </div>
+    
+    <div class="target">
+      <div class="count">エイロージュの捕獲数:<%= Airloge.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: kaminari_index_path, model: Airloge, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "airloge"%> 
+      <% end %>
+    </div>
+    
+    <div class="target">
+      <div class="count">ブエルの捕獲数:<%= Buell.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: kaminari_index_path, model: Buell, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "buell"%> 
+      <% end %>       
+    </div>
+    
+    <div class="target">
+      <div class="count">ゴールドエレメントの捕獲数:<%= Gold.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: kaminari_index_path, model: Gold, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "gold"%> 
+      <% end %>       
+    </div>
+   
+    <div class="target">
+      <div class="count">クサーリクの捕獲数:<%= Ksarlik.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: kaminari_index_path, model: Ksarlik, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ksarlik"%> 
+      <% end %>       
+    </div>
+    
+    <div class="target">
+      <div class="count">ラルヴァの捕獲数:<%= Larva.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: kaminari_index_path, model: Thunder, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "larva"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">鉄巨人の捕獲数:<%= Tetsukyojin.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: kaminari_index_path, model: Tetsukyojin, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "tetsukyojin"%> 
+      <% end %>       
+    </div>
 
     <div class="target">
       <div class="count">サボテンダー?の捕獲数:<%= Unsabotender.includes(:user).where(user_id: current_user.id).count%></div>
@@ -11,5 +60,6 @@
         <%= f.submit "＋" , class: "btn-gradient-3d", name: "unsabotender"%> 
       <% end %>
     </div>
+
   </div>
 </div>

@@ -4,5 +4,68 @@
 <div class="contents">
   <div class="background-contents"></div>
   <div class="targets">
+
+    <div class="target-n">
+      <div class="count">スコルの捕獲数:<%= Skol.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: nagi_index_path, model: Skol, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "skol"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-n">
+      <div class="count">ネビロスの捕獲数:<%= Neviro.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: nagi_index_path, model: Neviro, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "neviro"%> 
+      <% end %>
+    </div>
+
+    <div class="target-n">
+      <div class="count">フレイムプリンの捕獲数:<%= Flame.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: nagi_index_path, model: Flame, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "flame"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-n">
+      <div class="count">シュレッドの捕獲数:<%= Shred.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: nagi_index_path, model: Shred, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "shred"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-n">
+      <div class="count">ヘッジバイパーの捕獲数:<%= Hedgeviper.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: nagi_index_path, model: Hedgeviper, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "hedgeviper"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-n">
+      <div class="count">オーガの捕獲数:<%= Ogre.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: nagi_index_path, model: Ogre, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ogre"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-n">
+      <div class="count">クァールの捕獲数:<%= Qual.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: nagi_index_path, model: Qual, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "qual"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-n">
+      <div class="count">モルボルの捕獲数:<%= Morbol.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: nagi_index_path, model: Morbol, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "morbol"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-n">
+      <div class="count">キマイラブレインの捕獲数:<%= Chimerabrain.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: nagi_index_path, model: Chimerabrain, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "chimerabrain"%> 
+      <% end %>       
+    </div>
   </div>
 </div>

@@ -4,5 +4,75 @@
 <div class="contents">
   <div class="background-contents"></div>
   <div class="targets">
+
+    <div class="target-m">
+      <div class="count">ザウラスの捕獲数:<%= Zaura.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Zaura, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "zaura"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">デスフロートの捕獲数:<%= Deathfloat.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Deathfloat, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "deathfloat"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">ブラックエレメントの捕獲数:<%= Black.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Black, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "black"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">ハァルマの捕獲数:<%= Harma.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Harma, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "harma"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">ピュロボルスの捕獲数:<%= Pyurobol.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Pyurobol, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "pyurobol"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">スピリットの捕獲数:<%= Spirit.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Spirit, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "spirit"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">メチーエの捕獲数:<%= Metier.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Metier, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "metier"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">マスタークァールの捕獲数:<%= Masterqual.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Masterqual, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "masterqual"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">マスタードンペリの捕獲数:<%= Masterdomperi.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Masterdomperi, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "masterdomperi"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">ヴァルナの捕獲数:<%= Varna.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: omega_index_path, model: Varna, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "varna"%> 
+      <% end %>       
+    </div>
   </div>
 </div>

@@ -4,5 +4,68 @@
 <div class="contents">
   <div class="background-contents"></div>
   <div class="targets">
+
+    <div class="target-v">
+      <div class="count">ヨーウィーの捕獲数:<%= Yowee.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: valley_index_path, model: Yowee, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "yowee"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-v">
+      <div class="count">ガルキマセラの捕獲数:<%= Gulquimasera.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: valley_index_path, model: Gulquimasera, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "gulquimasera"%> 
+      <% end %>
+    </div>
+
+    <div class="target-v">
+      <div class="count">ダークエレメントの捕獲数:<%= Dark.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: valley_index_path, model: Dark, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "dark"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-v">
+      <div class="count">ニーズヘッグの捕獲数:<%= Needshegg.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: valley_index_path, model: Needshegg, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "needshegg"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-v">
+      <div class="count">ソーンの捕獲数:<%= Sorn.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: valley_index_path, model: Sorn, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "sorn"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-v">
+      <div class="count">ヴァラーハの捕獲数:<%= Varah.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: valley_index_path, model: Varah, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "varah"%> 
+      <% end %>
+    </div>
+
+    <div class="target-v">
+      <div class="count">エページュの捕獲数:<%= Epage.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: valley_index_path, model: Epage, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "epage"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-v">
+      <div class="count">ゴーストの捕獲数:<%= Ghost.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: valley_index_path, model: Ghost, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ghost"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-v">
+      <div class="count">ドンペリの捕獲数:<%= Domperi.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: valley_index_path, model: Domperi, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "domperi"%> 
+      <% end %>       
+    </div>
   </div>
 </div>

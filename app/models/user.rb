@@ -73,4 +73,36 @@ class User < ApplicationRecord
   has_many :basilisks
   has_many :ochus
   has_many :unsabotenders
+  has_many :larvas
+  has_many :kushipos
+  has_many :chimeras
+  has_many :zoos
+  has_many :sandworms
+  has_many :sabotenders
+  has_many :quals
+  has_many :hedgevipers
+  has_many :ogres
+  has_many :morbols
+  has_many :chimerabrains
+  has_many :epages
+  has_many :ghosts
+  has_many :domperis
+  has_many :glatts
+  has_many :mandragoras
+  has_many :behemoths
+  has_many :splashers
+  has_many :akeolos
+  has_many :ragings
+  has_many :ashuras
+  has_many :wraiths
+  has_many :devilmonoliths
+  has_many :morbolgreats
+  has_many :barbados
+  has_many :adamantais
+  has_many :kingbehemoths
+  has_many :spirits
+  has_many :metiers
+  has_many :masterquals
+  has_many :masterdomperis
+  has_many :varnas
 end

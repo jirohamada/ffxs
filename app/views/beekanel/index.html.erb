@@ -4,5 +4,47 @@
 <div class="contents">
   <div class="background-contents"></div>
   <div class="targets">
+
+    <div class="target">
+      <div class="count">サンドウルフの捕獲数:<%= Sandwolf.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: beekanel_index_path, model: Sandwolf, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "sandwolf"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">アルキュオネの捕獲数:<%= Arcuone.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: beekanel_index_path, model: Arcuone, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "arcuone"%> 
+      <% end %>
+    </div>
+
+    <div class="target">
+      <div class="count">ムシュフシュの捕獲数:<%= Mushufsh.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: beekanel_index_path, model: Mushufsh, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "mushufsh"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">ズーの捕獲数:<%= Zoo.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: beekanel_index_path, model: Zoo, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "zoo"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">サンドウォームの捕獲数:<%= Sandworm.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: beekanel_index_path, model: Sandworm, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "sandworm"%> 
+      <% end %>       
+    </div>
+
+    <div class="target">
+      <div class="count">サボテンダーの捕獲数:<%= Sabotender.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: beekanel_index_path, model: Sabotender, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "sabotender"%> 
+      <% end %>       
+    </div>
   </div>
 </div>

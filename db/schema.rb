@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_03_104507) do
+ActiveRecord::Schema.define(version: 2020_01_07_022416) do
+
+  create_table "adamantais", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
 
   create_table "ahrimen", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -19,6 +25,12 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
   end
 
   create_table "airloges", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "akeolos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
@@ -36,6 +48,12 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "ashuras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "balsams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -48,7 +66,19 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "barbados", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "basilisks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "behemoths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
@@ -90,6 +120,18 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "chimerabrains", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "chimeras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "condors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -114,6 +156,12 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "devilmonoliths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "dingos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -126,10 +174,22 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "domperis", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "dualhorns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+  end
+
+  create_table "epages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
   end
 
   create_table "evileyes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -174,6 +234,18 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "ghosts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "glatts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "golds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -204,6 +276,12 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "hedgevipers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "ices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -228,7 +306,19 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "kingbehemoths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "ksarliks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "kushipos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
@@ -240,7 +330,31 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "larvas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "mahouts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "mandragoras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "masterdomperis", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "masterquals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
@@ -252,7 +366,25 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "metiers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "michenfangs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "morbolgreats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "morbols", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
@@ -288,7 +420,25 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "ogres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "pyurobols", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "quals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "ragings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
@@ -318,7 +468,19 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "sabotenders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "sandwolves", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "sandworms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
@@ -361,6 +523,18 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
   end
 
   create_table "sorns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "spirits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "splashers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"
@@ -409,6 +583,12 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.integer "user_id"
   end
 
+  create_table "varnas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "vivres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -433,6 +613,12 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
     t.string "user_id"
   end
 
+  create_table "wraiths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
   create_table "yellows", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -446,6 +632,12 @@ ActiveRecord::Schema.define(version: 2020_01_03_104507) do
   end
 
   create_table "zauras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+  end
+
+  create_table "zoos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_id"

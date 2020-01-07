@@ -4,5 +4,89 @@
 <div class="contents">
   <div class="background-contents"></div>
   <div class="targets">
+
+    <div class="target-g">
+      <div class="count">バンダースナッチの捕獲数:<%= Bandersnatch.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Bandersnatch, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "bandersnatch"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">アーリマンの捕獲数:<%= Ahriman.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Ahriman, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ahriman"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">ダークプリンの捕獲数:<%= Darkp.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Darkp, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "darkp"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">グレネードの捕獲数:<%= Grenade.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Grenade, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "grenade"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">グレンデルの捕獲数:<%= Gurendel.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: gagazet_index_path, model: Gurendel, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "gurendel"%> 
+      <% end %>
+    </div>
+
+    <div class="target-g">
+      <div class="count">グラットの捕獲数:<%= Glatt.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Glatt, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "glatt"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">マンドラゴラの捕獲数:<%= Mandragora.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Mandragora, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "mandragora"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">アシュラの捕獲数:<%= Ashura.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Ashura, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ashura"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">スプラッシャーの捕獲数:<%= Splasher.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Splasher, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "splasher"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">ベヒーモスの捕獲数:<%= Behemoth.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Behemoth, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "behemoth"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">アケオロスの捕獲数:<%= Akeolo.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Akeolo, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "akeolo"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-g">
+      <div class="count">レイジングスパイクの捕獲数:<%= Raging.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: gagazet_index_path, model: Raging, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "raging"%> 
+      <% end %>       
+    </div>
   </div>
 </div>

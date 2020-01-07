@@ -4,5 +4,75 @@
 <div class="contents">
   <div class="background-contents"></div>
   <div class="targets">
+
+    <div class="target-m">
+      <div class="count">スノーウルフの捕獲数:<%= Snowwolf.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: macarania_path, model: Snowwolf, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "snowwolf"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">シュメルケの捕獲数:<%= Schmerke.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: macarania_path, model: Schmerke, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "schmerke"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">ワスプの捕獲数:<%= Wasp.includes(:user).where(user_id: current_user.id).count%></div>
+      <%= form_with(url: macarania_path, model: Wasp, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "wasp"%> 
+      <% end %>
+    </div>
+
+    <div class="target-m">
+      <div class="count">イービルアイの捕獲数:<%= Evileye.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: macarania_path, model: Evileye, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "evileye"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">アイスプリンの捕獲数:<%= Ice.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: macarania_path, model: Ice, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "ice"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">ブルーエレメントの捕獲数:<%= Blue.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: macarania_path, model: Blue, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "blue"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">ムルフシュの捕獲数:<%= Murhush.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: macarania_path, model: Murhush, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "murhush"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">マフートの捕獲数:<%= Mahout.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: macarania_path, model: Mahout, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "mahout"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">クーシポスの捕獲数:<%= Kushipo.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: macarania_path, model: Kushipo, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "kushipo"%> 
+      <% end %>       
+    </div>
+
+    <div class="target-m">
+      <div class="count">キマイラの捕獲数:<%= Chimera.includes(:user).where(user_id: current_user.id).count %></div>
+      <%= form_with(url: macarania_path, model: Chimera, method: :get, local: true) do |f| %>
+        <%= f.submit "＋" , class: "btn-gradient-3d", name: "chimera"%> 
+      <% end %>       
+    </div>
   </div>
 </div>
